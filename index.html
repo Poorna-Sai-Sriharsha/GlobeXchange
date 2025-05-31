@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobeXchange</title>
+  <!-- External CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <span onclick="toggleTheme()" class="theme-toggle">🌙</span>
+    <h1>🌍 GlobeXchange 💱</h1>
+    <!-- Amount input section with voice input option -->
+    <label for="oamount">Amount to Convert:-</label>
+    <input type="number" id="oamount" placeholder="Enter amount" oninput="history()">
+    <button onclick="startVoiceInput()"> Speak Amount</button>
+    <!-- Currency selection section -->
+    <div class="currency-row">
+      <div class="currency-group">
+        <label for="from">From:</label>
+        <select id="from" onchange="history()"></select>
+      </div>
+      <div class="currency-group">
+        <label for="to">To:</label>
+        <select id="to" onchange="history()"></select>
+      </div>
+    </div>
+    <!-- Conversion button and result display -->
+    <div style="text-align: center;">
+      <button onclick="convertCurrency()">Convert Now</button>
+    </div>
+    <div id="finalAmount">
+      <h2>Converted Amount: <span class="finalValue">0.00</span></h2>
+    </div>
+    <!-- Recent conversions history section -->
+    <h3>Recent Conversions</h3>
+    <ul id="recentList"></ul>
+  </div>
+  <!-- Footer with social links -->
+  <div class="footer">
+    <span>&copy; 2025 GlobeXchange | Developed by Poorna Sai Sriharsha
+    <a href="https://www.linkedin.com/in/poorna-sai-sriharsha-perina/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="color: #0A66C2;"></i></a>
+    <a href="https://github.com/Poorna-Sai-Sriharsha" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #181717;"></i></a></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
